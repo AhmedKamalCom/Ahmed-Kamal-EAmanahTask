@@ -1,0 +1,25 @@
+.blog-page{
+    box-shadow: 0 5px 5px -3px rgba(0,0,0,.2), 0 8px 10px 1px rgba(0,0,0,.14), 0 3px 14px 2px rgba(0,0,0,.12);
+    background-color: #fff;
+    padding: 30px 20px;
+    margin: 20px;
+}
+
+
+.example-full-width {
+    width: 100%;
+}
+
+input {
+    &:focus {
+        box-shadow: none;
+    }
+}
+.form-control:focus {
+    color: #212529;
+    background-color: unset;
+    /* border-color: red; */
+    outline: 0;
+    box-shadow: 0 0 0 0rem #f8f9fa;
+}
+

@@ -1,0 +1,258 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AlreadyExists" xml:space="preserve">
+    <value>Already Exists</value>
+  </data>
+  <data name="AlreadyUsedCouponWithSameCustomer" xml:space="preserve">
+    <value>Already Used Coupon With Same Customer</value>
+  </data>
+  <data name="CouponCodeAlreadyExist" xml:space="preserve">
+    <value>Coupon Code Already Exist</value>
+  </data>
+  <data name="DeleteAccountNotAllowedBecauseOfEntryDetails" xml:space="preserve">
+    <value>Delete Account NotAllowed BecauseOf EntryDetails</value>
+  </data>
+  <data name="DeleteBankNotAllowedBecauseOFStores" xml:space="preserve">
+    <value>Delete Bank NotAllowed BecauseOF Stores</value>
+  </data>
+  <data name="DeleteCategoryNotAllowedBecauseOFItems" xml:space="preserve">
+    <value>Delete Category Not Allowed BecauseOF Items</value>
+  </data>
+  <data name="DeleteCostCenterNotAllowedBecauseOfAccounts" xml:space="preserve">
+    <value>Delete CostCenter NotAllowed BecauseOf Accounts</value>
+  </data>
+  <data name="DeleteCustomerNotAllowedBecauseOFStoreDocuments" xml:space="preserve">
+    <value>Delete Customer NotAllowed BecauseOF StoreDocuments</value>
+  </data>
+  <data name="DeleteDepartmentNotAllowedBecauseOfEmployees" xml:space="preserve">
+    <value>Delete Department NotAllowed BecauseOf Employees</value>
+  </data>
+  <data name="DeleteEmployeeNotAllowedBecauseOFSales" xml:space="preserve">
+    <value>Delete Employee NotAllowed BecauseOF Sales</value>
+  </data>
+  <data name="DeleteEmployeeNotAllowedBecauseOFStores" xml:space="preserve">
+    <value>Delete Employee NotAllowed BecauseOF Stores</value>
+  </data>
+  <data name="DeleteFiscalYearNotAllowedBecauseOfEntries" xml:space="preserve">
+    <value>Delete FiscalYear NotAllowed BecauseOf Entries</value>
+  </data>
+  <data name="DeleteItemNotAllowedBecauseOFBuffetPreparationItems" xml:space="preserve">
+    <value>Delete Item Not Allowed Because OF BuffetPreparationItems</value>
+  </data>
+  <data name="DeleteItemNotAllowedBecauseOFCardSizeItems" xml:space="preserve">
+    <value>Delete Item Not Allowed Because OF Card Size Items</value>
+  </data>
+  <data name="DeleteItemNotAllowedBecauseOFStoreRequestDetails" xml:space="preserve">
+    <value>Delete Item Not Allowed Because OF Store Request Details</value>
+  </data>
+  <data name="DeleteJobNotAllowedBecauseOfEmployees" xml:space="preserve">
+    <value>Delete Job NotAllowed BecauseOf Employees</value>
+  </data>
+  <data name="DeleteStoreNotAllowedBecauseOfItemTransactions" xml:space="preserve">
+    <value>Delete Store Not Allowed BecauseOf ItemTransactions</value>
+  </data>
+  <data name="DeleteStoreNotAllowedBecauseOfKitchens" xml:space="preserve">
+    <value>Delete Store Not Allowed BecauseOf Kitchens</value>
+  </data>
+  <data name="DeleteStoreNotAllowedBecauseOfStoreDocuments" xml:space="preserve">
+    <value>Delete Store Not Allowed BecauseOf StoreDocuments</value>
+  </data>
+  <data name="DeleteStoreNotAllowedBecauseOfStoreRequests" xml:space="preserve">
+    <value>Delete Store Not Allowed BecauseOf StoreRequests</value>
+  </data>
+  <data name="DeleteStoreNotAllowedBecauseOfTreasuries" xml:space="preserve">
+    <value>Delete Store Not Allowed BecauseOf Treasuries</value>
+  </data>
+  <data name="DeleteStoreRequestNotAllowedBecauseOfStoreDocuments" xml:space="preserve">
+    <value>Delete StoreRequest Not Allowed BecauseOf StoreDocuments</value>
+  </data>
+  <data name="DeleteSupplierNotAllowedBecauseOFStoreDocuments" xml:space="preserve">
+    <value>Delete Supplier NotAllowed BecauseOF StoreDocuments</value>
+  </data>
+  <data name="DeleteTreasuryNotAllowedBecauseOFCashDocuments" xml:space="preserve">
+    <value>Delete Treasury NotAllowed BecauseOF CashDocuments</value>
+  </data>
+  <data name="DeleteTreasuryNotAllowedBecauseOFStore" xml:space="preserve">
+    <value>Delete Treasury NotAllowed BecauseOF Store</value>
+  </data>
+  <data name="DeleteUnitNotAllowedBecauseOfItemTransactions" xml:space="preserve">
+    <value>Delete Unit Not Allowed BecauseOf ItemTransactions</value>
+  </data>
+  <data name="DeleteUnitNotAllowedBecauseOfItemUnits" xml:space="preserve">
+    <value>Delete Unit NotAllowed BecauseOf ItemUnits</value>
+  </data>
+  <data name="ErrorOccurred" xml:space="preserve">
+    <value>Error Occurred</value>
+  </data>
+  <data name="HasChilds" xml:space="preserve">
+    <value>Can't delete this node, bceause it has childs</value>
+  </data>
+  <data name="InValidFieldLength" xml:space="preserve">
+    <value>Invalid field length</value>
+  </data>
+  <data name="InValidUser" xml:space="preserve">
+    <value>Invalid username or password</value>
+  </data>
+  <data name="NoCostCenterForThisBranch" xml:space="preserve">
+    <value>No CostCenter For This Branch</value>
+  </data>
+  <data name="NotMapped" xml:space="preserve">
+    <value>Error During Account Mapping.</value>
+  </data>
+  <data name="OrderIsPaid" xml:space="preserve">
+    <value>Order has been Paid</value>
+  </data>
+  <data name="QuantityNotEnough" xml:space="preserve">
+    <value>Quantity Not Enough</value>
+  </data>
+  <data name="RequiredField" xml:space="preserve">
+    <value>Required field</value>
+  </data>
+  <data name="RequiredFieldValidation" xml:space="preserve">
+    <value>Required Field Validation</value>
+  </data>
+  <data name="StoreDoumentDeleteNotAllowedBecauseOfStoreDocuments" xml:space="preserve">
+    <value>StoreDoument Delete Not Allowed BecauseOf StoreDocuments</value>
+  </data>
+  <data name="SuccessfullyCreated" xml:space="preserve">
+    <value>Successfully created</value>
+  </data>
+  <data name="SuccessfullyDeleted" xml:space="preserve">
+    <value>Successfully Deleted</value>
+  </data>
+  <data name="SuccessfullyPosted" xml:space="preserve">
+    <value>Successfully Posted</value>
+  </data>
+  <data name="SuccessfullyRegistered" xml:space="preserve">
+    <value>Successfully Registered</value>
+  </data>
+  <data name="SuccessfullySended" xml:space="preserve">
+    <value>Successfully Sended</value>
+  </data>
+  <data name="SuccessfullyUpdated" xml:space="preserve">
+    <value>Successfully Updated</value>
+  </data>
+  <data name="ValdationCodeSentToEmail" xml:space="preserve">
+    <value>valdation code sent to email</value>
+  </data>
+  <data name="Welcome" xml:space="preserve">
+    <value>welcome</value>
+  </data>
+</root>
