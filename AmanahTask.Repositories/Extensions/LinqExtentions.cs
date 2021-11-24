@@ -4,7 +4,6 @@ using System.Data;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Reflection;
-using System.Text;
 
 namespace AmanahTask.Repositories
 {
@@ -17,7 +16,6 @@ namespace AmanahTask.Repositories
         public static IQueryable<T> Random<T>(this IQueryable<T> source) where T : class
         {
             return source.OrderBy(c => Guid.NewGuid());
-
         }
 
         private static readonly MethodInfo OrderByMethod =

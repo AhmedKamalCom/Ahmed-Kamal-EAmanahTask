@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AmanahTask.Repositories.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20211123212752_init")]
+    [Migration("20211124224530_init")]
     partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -27,9 +27,6 @@ namespace AmanahTask.Repositories.Migrations
                     b.Property<string>("Body")
                         .HasColumnType("TEXT");
 
-                    b.Property<long>("CreatedBy")
-                        .HasColumnType("INTEGER");
-
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("TEXT");
 
@@ -38,9 +35,6 @@ namespace AmanahTask.Repositories.Migrations
 
                     b.Property<string>("Title")
                         .HasColumnType("TEXT");
-
-                    b.Property<long?>("UpdatedBy")
-                        .HasColumnType("INTEGER");
 
                     b.Property<DateTime?>("UpdatedDate")
                         .HasColumnType("TEXT");

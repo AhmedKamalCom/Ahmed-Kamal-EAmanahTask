@@ -19,12 +19,6 @@
       </mat-form-field>
       <div class="table-responsive" *ngIf="!loading; else NoData">
         <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
-          <ng-container matColumnDef="CreatedDate">
-            <th mat-header-cell *matHeaderCellDef>CreatedDate </th>
-            <td mat-cell *matCellDef="let element"> <a [routerLink]="[element.ID]">
-                {{element.CreatedDate | date}}</a>
-            </td>
-          </ng-container>
           <ng-container matColumnDef="Title">
             <th mat-header-cell *matHeaderCellDef>Title</th>
             <td mat-cell *matCellDef="let element"> <a [routerLink]="[element.ID]">{{element.Title}}</a>

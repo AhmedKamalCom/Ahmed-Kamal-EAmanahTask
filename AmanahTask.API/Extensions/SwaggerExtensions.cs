@@ -16,8 +16,6 @@ namespace AmanahTask.API
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new    OpenApiInfo { Title = "My API", Version = "v1" });
-                //var filePath = Path.Combine(System.AppContext.BaseDirectory, "AmanahTask.API.xml");
-                //c.IncludeXmlComments(filePath);
             });
         }
     }

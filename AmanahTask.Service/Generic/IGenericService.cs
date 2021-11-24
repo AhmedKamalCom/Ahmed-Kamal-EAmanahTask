@@ -1,11 +1,8 @@
-﻿using AmanahTask.ViewModels;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 
 namespace AmanahTask.Services
 {
-    public interface IBaseService<TEditViewModel, TViewModel> 
+    public interface IGenericService<TEditViewModel, TViewModel> 
     {
         IEnumerable<TViewModel> GetList();
         TViewModel GetByID(long id);

@@ -1,8 +1,5 @@
-﻿using AutoMapper;
-using AmanahTask.Models;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using AmanahTask.Models;
+using AutoMapper;
 
 namespace AmanahTask.ViewModels
 {
@@ -11,10 +8,8 @@ namespace AmanahTask.ViewModels
         public BlogProfile()
         {
             CreateMap<BlogEditViewModel, Blog>(MemberList.None);         
-            CreateMap<Blog, BlogViewModel>().AfterMap(
-                            (src, dest, c) => {                               
-                            }
-             );
+            CreateMap<Blog, BlogEditViewModel>(MemberList.None);
+            CreateMap<Blog, BlogViewModel>(MemberList.None);
         }
     }
 }

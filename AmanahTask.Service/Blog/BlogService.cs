@@ -1,12 +1,11 @@
 ﻿
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using AutoMapper;
 using AmanahTask.Models;
 using AmanahTask.Repositories;
 using AmanahTask.ViewModels;
-using Microsoft.EntityFrameworkCore;
+using AutoMapper;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace AmanahTask.Services
 {
@@ -15,8 +14,6 @@ namespace AmanahTask.Services
 
         public BlogService(IUnitOfWork unitOfWork) : base(unitOfWork)
         {
-            
-
         }
         public PagingViewModel Get(string name = "", string orderBy = "ID", bool isAscending = false, int pageIndex = 1, int pageSize = 20)
         {
@@ -32,7 +29,5 @@ namespace AmanahTask.Services
             result = items.ToList().Select(x=>Mapper.Map<BlogViewModel>(x)).ToList();
             return new PagingViewModel() { PageIndex = pageIndex, PageSize = pageSize, Result = result, Records = records, Pages = pages };
         }
-
-     
     }
 }

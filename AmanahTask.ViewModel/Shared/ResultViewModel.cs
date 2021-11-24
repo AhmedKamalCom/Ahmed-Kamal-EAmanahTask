@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace AmanahTask.ViewModels
 {
@@ -47,11 +45,6 @@ namespace AmanahTask.ViewModels
                 result.Message = "Error Occurred" /*SharedResource.ErrorOccurred*/;
 
             return result;
-        }
-
-        public ResultViewModel Create(bool v, object errorOccurred)
-        {
-            throw new NotImplementedException();
         }
     }
 }

@@ -25,9 +25,6 @@ namespace AmanahTask.Repositories.Migrations
                     b.Property<string>("Body")
                         .HasColumnType("TEXT");
 
-                    b.Property<long>("CreatedBy")
-                        .HasColumnType("INTEGER");
-
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("TEXT");
 
@@ -36,9 +33,6 @@ namespace AmanahTask.Repositories.Migrations
 
                     b.Property<string>("Title")
                         .HasColumnType("TEXT");
-
-                    b.Property<long?>("UpdatedBy")
-                        .HasColumnType("INTEGER");
 
                     b.Property<DateTime?>("UpdatedDate")
                         .HasColumnType("TEXT");

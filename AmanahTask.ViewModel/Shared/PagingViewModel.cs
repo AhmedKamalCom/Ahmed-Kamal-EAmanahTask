@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace AmanahTask.ViewModels
+﻿namespace AmanahTask.ViewModels
 {
     public class PagingViewModel
     {

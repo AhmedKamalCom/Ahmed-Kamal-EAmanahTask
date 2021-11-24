@@ -3,7 +3,6 @@ using AmanahTask.Models;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace AmanahTask.Repositories
 {
@@ -12,29 +11,21 @@ namespace AmanahTask.Repositories
         private DbSet<T> _dbSet;
         private readonly DataContext _context;
         public long UserID { get; set; } = 1;
-        protected string[] defaultExcludedEditProperties = new string[]
-         { "CreatedDate",
-                 "CreatedBy",
-                 "ID"
-         };
+        protected string[] defaultExcludedEditProperties = new string[]  { "CreatedDate","ID"};
         public Repository(DataContext dbContext)
         {
             _context = dbContext;
             _dbSet = dbContext.Set<T>();
         }
-
         public T Add(T model)
         {
             _context.Set<T>().Add(model);
             return model;
         }
-
-
         public virtual T Edit(T entity)
         {
             if (defaultExcludedEditProperties.Any())
             {
-
                 var oldEntity = _context.Set<T>().Local.FirstOrDefault(e => e.ID == entity.ID);
                 if (oldEntity != null)
                     _context.Entry<T>(oldEntity).State = EntityState.Detached;
@@ -49,12 +40,10 @@ namespace AmanahTask.Repositories
                 {
                     _context.Entry(entity).Property(name).IsModified = true;
                 }
-                entity.UpdatedBy = 1;
                 entity.UpdatedDate = DateTime.Now;
             }
             else
             {
-                entity.UpdatedBy = UserID;
                 entity.UpdatedDate = DateTime.Now;
                 _context.Entry<T>(entity).State = EntityState.Modified;
             }
@@ -65,7 +54,6 @@ namespace AmanahTask.Repositories
         public virtual void Remove(long id)
         {
             T entity = _dbSet.Where(x => !x.IsDeleted).FirstOrDefault(i => i.ID == id);
-            entity.UpdatedBy = UserID;
             entity.IsDeleted = true;
             entity.UpdatedDate = DateTime.Now;
             _context.Entry<T>(entity).State = EntityState.Modified;

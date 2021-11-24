@@ -16,9 +16,7 @@ namespace AmanahTask.Repositories.Migrations
                     Title = table.Column<string>(type: "TEXT", nullable: true),
                     Body = table.Column<string>(type: "TEXT", nullable: true),
                     CreatedDate = table.Column<DateTime>(type: "TEXT", nullable: false),
-                    CreatedBy = table.Column<long>(type: "INTEGER", nullable: false),
                     UpdatedDate = table.Column<DateTime>(type: "TEXT", nullable: true),
-                    UpdatedBy = table.Column<long>(type: "INTEGER", nullable: true),
                     IsDeleted = table.Column<bool>(type: "INTEGER", nullable: false)
                 },
                 constraints: table =>

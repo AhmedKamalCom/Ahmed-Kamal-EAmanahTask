@@ -13,7 +13,6 @@ namespace AmanahTask.API.Filters
             if (!context.ModelState.IsValid)
             {
                 var x = context.ModelState.Values.SelectMany(v => v.Errors).Select(e => e.ErrorMessage).FirstOrDefault();
-
             }
         }
 
@@ -21,9 +20,7 @@ namespace AmanahTask.API.Filters
         {
             if (!context.ModelState.IsValid)
             {
-
                 var x = context.ModelState.Values.SelectMany(v => v.Errors).Select(e => e.ErrorMessage).FirstOrDefault();
-
             }
         }
     }

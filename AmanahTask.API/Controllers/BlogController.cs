@@ -18,9 +18,7 @@ namespace AmanahTask.API.Controllers
             _resultViewModel = new ResultViewModel();
 
         }
-        /// <summary>
-        /// Retrieves objects By filter 
-        /// </summary>
+        // Retrieves objects By filter 
         [HttpGet]
         [Route("Get")]
         public ResultViewModel Get(string name = "", string orderBy = "ID", bool isAscending = false, int pageIndex = 1, int pageSize = 20)
@@ -34,16 +32,13 @@ namespace AmanahTask.API.Controllers
                _resultViewModel =  _resultViewModel.Create(false, ex.Message);
             }
             return _resultViewModel;
-
         }
-        /// <summary>
-        /// Retrieves all objects 
-        /// </summary>
+       
+        // Retrieves all objects 
         [HttpGet]
         [Route("GetList")]
         public ResultViewModel GetList()
         {
-
             try
             {
                 _resultViewModel.Data = _service.GetList();
@@ -54,10 +49,8 @@ namespace AmanahTask.API.Controllers
             }
             return _resultViewModel;
         }
-        /// <summary>
-        /// Retrieves a specific object by id
-        /// </summary>
 
+        // Retrieves a specific object by id
         [HttpGet]
         [Route("GetByID/{id}")]
         public ResultViewModel GetByID(long id)
@@ -72,15 +65,12 @@ namespace AmanahTask.API.Controllers
             }
             return _resultViewModel;
         }
-        /// <summary>
-        /// Retrieves a specific object To Edit by id
-        /// </summary>
 
+        // Retrieves a specific object To Edit by id
         [HttpGet]
         [Route("GetEditableByID/{id}")]
         public ResultViewModel GetEditableByID(long id)
         {
-
             try
             {
                 _resultViewModel.Data = _service.GetEditableByID(id);
@@ -92,16 +82,14 @@ namespace AmanahTask.API.Controllers
             return _resultViewModel;
         }
 
-        /// <summary>
-        /// add new object
-        /// </summary>
+        // add new object
         [HttpPost]
         [Route("Post")]
         public ResultViewModel Post([FromBody] BlogEditViewModel viewModel)
         {
             try
             {
-                _resultViewModel = _resultViewModel.Create(true, /*SharedResource.SuccessfullyCreated*/ "SuccessfullyCreated", _service.Add(viewModel));
+                _resultViewModel = _resultViewModel.Create(true, "Successfully Created", _service.Add(viewModel));
             }
             catch (Exception ex)
             {
@@ -110,13 +98,14 @@ namespace AmanahTask.API.Controllers
             return _resultViewModel;
         }
 
+        // Edit object
         [HttpPut]
         [Route("Put")]
         public ResultViewModel Put([FromBody] BlogEditViewModel viewModel)
         {
             try
             {
-                _resultViewModel = _resultViewModel.Create(true, "SuccessfullyUpdated" /*SharedResource.SuccessfullyUpdated*/, _service.Edit(viewModel));
+                _resultViewModel = _resultViewModel.Create(true, "Successfully Updated" , _service.Edit(viewModel));
             }
             catch (Exception ex)
             {
@@ -125,15 +114,15 @@ namespace AmanahTask.API.Controllers
             return _resultViewModel;
         }
 
+        // Delete object
         [HttpDelete]
         [Route("Delete/{id}")]
         public ResultViewModel Delete(long id)
         {
-
             try
             {
                 _service.Remove(id);
-                _resultViewModel.Message = "SuccessfullyDeleted" /*SharedResource.SuccessfullyDeleted*/;
+                _resultViewModel.Message = "Successfully Deleted";
             }
             catch (Exception ex)
             {

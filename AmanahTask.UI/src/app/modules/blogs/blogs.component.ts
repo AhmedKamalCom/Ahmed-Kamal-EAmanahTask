@@ -14,7 +14,7 @@ export class BlogsComponent implements OnInit {
   params: IFilterBlog = { name: '', orderBy: 'CreatedDate', isAscending: false, pageIndex: 1, pageSize: 10 }
   loading: boolean
   Data: any
-  displayedColumns: string[] = ['CreatedDate', 'Title', 'control'];
+  displayedColumns: string[] = ['Title', 'control'];
   dataSource = new MatTableDataSource<any>([]);
 
   constructor(
