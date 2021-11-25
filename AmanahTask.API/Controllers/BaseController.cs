@@ -2,9 +2,7 @@
 
 namespace AmanahTask.API.Controllers
 {
-
     public class BaseController : ControllerBase
     {
-       
     }
 }

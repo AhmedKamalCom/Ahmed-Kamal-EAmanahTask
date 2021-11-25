@@ -15,8 +15,8 @@ namespace AmanahTask.Repositories
             _context = context;
             _serviceProvider = serviceProvider;
         }
-        public T Repository<T>() where T : class
 
+        public T Repository<T>() where T : class
         {
             var interfaceType = typeof(T).GetInterface($"I{typeof(T).Name}");
             
@@ -29,14 +29,15 @@ namespace AmanahTask.Repositories
         {
             return _context.SaveChanges();
         }
+
         public void Rollback()
         {
             _context.ChangeTracker.Entries().ToList().ForEach(x => x.Reload());
         }
+
         public IDbContextTransaction BeginTransaction()
         {
-            IDbContextTransaction res = _context.Database.BeginTransaction();
-            return res;
+            return _context.Database.BeginTransaction();
         }
 
     }

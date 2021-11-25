@@ -17,8 +17,8 @@ namespace AmanahTask.Services
         }
         public virtual TEditViewModel Add(TEditViewModel model)
         {
-            var obj = Mapper.Map<TModel>(model);
-            var attachedObj = _repository.Add(obj);
+            TModel obj = Mapper.Map<TModel>(model);
+            TModel attachedObj = _repository.Add(obj);
             _unitOfWork.Commit();
             return Mapper.Map<TEditViewModel>(attachedObj);
         }
@@ -31,17 +31,18 @@ namespace AmanahTask.Services
         }
         public virtual TViewModel GetByID(long id)
         {
-            var model = _repository.GetById(id);
+            TModel model = _repository.GetById(id);
             return Mapper.Map<TViewModel>(model);
         }
         public virtual TEditViewModel GetEditableByID(long id)
         {
-            var model = _repository.GetById(id);
+            TModel model = _repository.GetById(id);
             return Mapper.Map<TEditViewModel>(model);
         }
         public virtual IEnumerable<TViewModel> GetList()
         {
-            return _repository.GetAll().ToList().Select(x => Mapper.Map<TViewModel>(x)).ToList();
+            List<TModel> models = _repository.GetAll().ToList();
+            return models.Select(x => Mapper.Map<TViewModel>(x)).ToList();
         }
         public virtual void Remove(long id)
         {

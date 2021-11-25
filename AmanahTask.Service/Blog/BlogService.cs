@@ -19,7 +19,7 @@ namespace AmanahTask.Services
         {
             var list = _repository.GetAll();
             if (!string.IsNullOrEmpty(name))
-                list = list.Where(x => x.Title.Contains(name) );
+                list = list.Where(blog => blog.Title.Contains(name) );
             int records = list.Count();
             if (records <= pageSize || pageIndex <= 0) pageIndex = 1;
             int pages = (int)Math.Ceiling((double)records / pageSize);

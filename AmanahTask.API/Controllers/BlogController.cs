@@ -18,6 +18,7 @@ namespace AmanahTask.API.Controllers
             _resultViewModel = new ResultViewModel();
 
         }
+
         // Retrieves objects By filter 
         [HttpGet]
         [Route("Get")]

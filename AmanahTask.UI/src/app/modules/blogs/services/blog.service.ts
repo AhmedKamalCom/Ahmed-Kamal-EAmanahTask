@@ -17,7 +17,6 @@ export class BlogService {
     return this.webApi.get(`${this.controller}/GetById/${id}`);
   }
   GetList() {
-
     return this.webApi.get(`${this.controller}/GetList`);
   }
   Post(body) {

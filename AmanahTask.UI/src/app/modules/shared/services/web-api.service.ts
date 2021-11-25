@@ -4,12 +4,9 @@ import { HttpHeaders, HttpParams, HttpClient } from '@angular/common/http';
 
 import { tap } from 'rxjs/operators';
 import { Observable } from 'rxjs';
-
-
-
-import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment';
 import { MatSnackBar } from '@angular/material/snack-bar';
+
 interface ResultViewModel {
   Success: boolean;
   Message: string;
@@ -43,13 +40,12 @@ export class WebApiService {
     // if (!environment.production)
     console.log(path, error)
     if (error.status === 505 || error.status === 506) {
-      this._snackBar.open(" You not authorized" ,"", {
+      this._snackBar.open(" You not authorized", "", {
         duration: 3000, panelClass: (["snack-error"])
       });
-     
     }
   }
- 
+
 
   private log(path, res) {
     if (!environment.production) console.log(path, res);
@@ -66,10 +62,6 @@ export class WebApiService {
   delete(path: string, params?: HttpParams): Observable<ResultViewModel> {
     return this.http.delete<ResultViewModel>(`${environment.api_url}${path}`, { headers: this.setHeaders(false, path), params }).pipe(tap(res => this.log(path, res), error => this.logError(path, error)));
   }
-  // fileUpload(path: string, formData: FormData): Observable<any> {
-  //   return this.http.request(new HttpRequest('POST', `${environment.api_url}${path}`, formData, { headers: this.setHeaders(true), reportProgress: true })).pipe(tap(res => this.log(path, res), error => this.logError(path, error)));
-  // }
-
   postFile(path: string, formData: FormData): Observable<ResultViewModel> {
     return this.http.post<ResultViewModel>(`${environment.api_url}${path}`, formData, { headers: this.setHeaders(true, path) }).pipe(tap(res => this.log(path, res), error => this.logError(path, error)));
 

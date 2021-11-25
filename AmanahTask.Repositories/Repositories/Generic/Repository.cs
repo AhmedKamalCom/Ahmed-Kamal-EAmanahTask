@@ -10,7 +10,6 @@ namespace AmanahTask.Repositories
     {
         private DbSet<T> _dbSet;
         private readonly DataContext _context;
-        public long UserID { get; set; } = 1;
         protected string[] defaultExcludedEditProperties = new string[]  { "CreatedDate","ID"};
         public Repository(DataContext dbContext)
         {
@@ -50,7 +49,6 @@ namespace AmanahTask.Repositories
             return entity;
         }
 
-
         public virtual void Remove(long id)
         {
             T entity = _dbSet.Where(x => !x.IsDeleted).FirstOrDefault(i => i.ID == id);
@@ -58,11 +56,13 @@ namespace AmanahTask.Repositories
             entity.UpdatedDate = DateTime.Now;
             _context.Entry<T>(entity).State = EntityState.Modified;
         }
+
         public virtual void Delete(long id)
         {
             T entity = _dbSet.FirstOrDefault(i => i.ID == id);
             _dbSet.Remove(entity);
         }
+
         public virtual IQueryable<T> GetAll()
         {
             return _context.Set<T>().Where(x=>!x.IsDeleted).AsQueryable();

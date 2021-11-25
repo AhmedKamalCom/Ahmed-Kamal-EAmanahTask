@@ -6,11 +6,9 @@ import { BlogsRoutingModule } from './blogs-routing.module';
 import { SharedModule } from '../shared/shared.module';
 import { BlogService } from './services/blog.service';
 
-
-
 @NgModule({
   declarations: [
-     BlogsComponent,
+    BlogsComponent,
     BlogComponent
   ],
   imports: [
@@ -18,6 +16,6 @@ import { BlogService } from './services/blog.service';
     BlogsRoutingModule,
     SharedModule
   ],
-  providers:[BlogService]
+  providers: [BlogService]
 })
 export class BlogsModule { }
